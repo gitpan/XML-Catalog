@@ -2,3 +2,6 @@ Revision history for Perl extension XML::Catalog.
 
 0.01  Fri Jun 11 00:00:00 1999
 	- original version; created by h2xs 1.18
+0.02  Thu Sep 21 09:00:00 2000
+	- Fixed problem disallowing backslashes in identifiers in SOCAT format
+	- Added get_handler() method

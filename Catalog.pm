@@ -7,7 +7,7 @@ use LWP::Simple;
 use URI::URL;
 use Text::ParseWords;
 
-$VERSION = '0.01';
+$VERSION = '0.02';
 
 #####################################################################
 # Class variables (private)
@@ -63,6 +63,20 @@ sub remap_system {
   %visited=();
   my $rm=$self->_remap_system($sysid);
   return(defined($rm)?$rm:$sysid);
+}
+
+sub get_handler {
+  my ($catalog,$parser)=@_;
+  my ($t,$orig_handler)=$parser->setHandlers(ExternEnt=>0);
+  return sub {
+    my ($expat,$base,$sysid,$pubid)=@_;
+    if ($pubid) {
+      my $t=$catalog->resolve_public($pubid);
+      $sysid=$t if $t;
+    }
+    $sysid=$catalog->remap_system($sysid);
+    $orig_handler->($expat,$base,$sysid,$pubid);
+  }
 }
 
 #####################################################################
@@ -189,6 +203,8 @@ sub set_base {
 sub parse_SOCAT {
   my ($token,$sysid,$pubid,$href);
   my ($self,$ct)=@_;
+  #backslashes are allowed; change them to forward slashes
+  $ct=~s#\\#/#g;
   #strip comments
   $ct=~s/((['"]).*\2|.*)--.*?--/$1/g;
   my @tokens=quotewords('\s+',0,$ct);
@@ -273,6 +289,7 @@ XML::Catalog - Resolve public identifiers and remap system identifiers
   $catalog->add('http://www.w3.org/xcatalog/mastercat.xml');
   my $sysid=$catalog->resolve_public('-//John Cowan//LOC Diacritics');
   my $newsysid=$catalog->remap_system('http://www.w3.org');
+  $parser->setHandlers(ExternEnt=>$catalog->get_handler($parser));
 
 =head1 DESCRIPTION
 
@@ -317,6 +334,16 @@ undef if the identifier could not be translated.
 Remap the system identifier SYSID as specified by the catalog.  Returns 
 SYSID unchanged if no remapping was found.
 
+=item get_handler(PARSER)
+
+Returns a coderef to a resolver suitable for use as the ExternEnt handler 
+for an XML::Parser object.  The resolver will first attempt to resolve a 
+public identifier if supplied, and then attempt to remap the resulting 
+system identifier (or the original system identifier if no public 
+identifier was supplied).  It will then call the original ExternEnt handler 
+associated with the parser object.  PARSER is the parser object; it is 
+needed as an argument in order to obtain the original handler.
+
 =back
 
 =head1 BUGS / TODO
@@ -333,7 +360,7 @@ Eric Bohlman (ebohlman@netcom.com)
 
 =head1 COPYRIGHT
 
-Copyright 1999 Eric Bohlman.  All rights reserved.
+Copyright 1999-2000 Eric Bohlman.  All rights reserved.
 
 This program is free software; you can use/modify/redistribute it under the 
 same terms as Perl itself.
