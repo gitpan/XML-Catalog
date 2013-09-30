@@ -20,13 +20,19 @@ in either SOCAT or XML syntax (see the proposal for syntax details);
 XML::Catalog will assume SOCAT syntax if the catalog is not in well-formed 
 XML syntax.
 
+This module, as of 1.0.0, also supports Oasis XML catalogs.
+
 =head1 AUTHOR
 
-Eric Bohlman (ebohlman@netcom.com)
+Current Author:
+	Jeff Fearn E<lt>jfearn@cpan.orgE<gt>.
+
+Former Authors:Eric Bohlman (ebohlman@netcom.com)
 
 =head1 COPYRIGHT
 
-Copyright 1999-2000 Eric Bohlman.  All rights reserved.
+Copyright (c) 1999-2000 Eric Bohlman.  All rights reserved.
+Copyright (c) 2013 Jeff Fearn. All rights reserved.
 
 This program is free software; you can use/modify/redistribute it under the 
 same terms as Perl itself.

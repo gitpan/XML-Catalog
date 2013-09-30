@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!DOCTYPE catalog PUBLIC "-//OASIS//DTD Entity Resolution XML Catalog V1.0//EN" "http://www.oasis-open.org/committees/entity/release/1.0/catalog.dtd">
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <delegateSystem systemIdStartString="http://test.example.com/test/" catalog="file://./t/delegate.cat"/>
+  <delegateURI uriStartString="http://test.example.com/test/" catalog="file://./t/delegate.cat"/>
+  <rewriteURI uriStartString="http://test.example.com/test" rewritePrefix="file://./t/test-uri"/>
+  <delegatePublic publicIdStartString="-//OASIS//TEST 2 DTD//EN" catalog="file://delegate.cat"/>
+  <public publicId="-//OASIS//TEST DTD//EN" uri="file://./t/test.dtd"/>
+</catalog>
