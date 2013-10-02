@@ -9,7 +9,7 @@ use LWP::Simple;
 use URI::URL;
 use Text::ParseWords;
 
-$VERSION = '1.0.0_1';
+$VERSION = '1.0.0';
 
 #####################################################################
 # Class variables (private)
@@ -469,9 +469,11 @@ Error checking leaves much to be desired.
 =head1 AUTHOR
 
 Current Author:
+
 	Jeff Fearn E<lt>jfearn@cpan.orgE<gt>.
 
 Former Authors:
+
 	Eric Bohlman E<lt>ebohlman@netcom.comE<gt>.
 
 =head1 COPYRIGHT

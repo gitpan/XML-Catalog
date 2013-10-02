@@ -1,6 +1,6 @@
 Revision history for Perl extension XML::Catalog.
 
-1.0.0_1 Mon Sep 30 2013
+1.0.0 Wed Oct 02 2013
 - Support Oasis Catalogs. RT #87010
 - Fix requires. RT #46047
 

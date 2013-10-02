@@ -25,9 +25,12 @@ This module, as of 1.0.0, also supports Oasis XML catalogs.
 =head1 AUTHOR
 
 Current Author:
+
 	Jeff Fearn E<lt>jfearn@cpan.orgE<gt>.
 
-Former Authors:Eric Bohlman (ebohlman@netcom.com)
+Former Authors:
+
+	Eric Bohlman (ebohlman@netcom.com)
 
 =head1 COPYRIGHT
 

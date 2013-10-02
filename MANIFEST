@@ -13,4 +13,3 @@ t/oasis.cat
 xt/author/perlcritic.t
 xt/author/pod-coverage.t
 xt/author/pod.t
-META.json
