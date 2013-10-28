@@ -35,6 +35,7 @@ my $builder = $class->new(
         'LWP::Simple'         => 0,
         'URI::URL'            => 0,
         'Text::ParseWords'    => 0,
+        'Cwd'                 => 0,
     },
     requires => {
         'XML::Parser'      => 0,

@@ -31,7 +31,7 @@
 \.bak$
 \.tmp$
 ^MYMETA.yml$
-\bXML-Catalog-[\d\.\_]+
+\bXML-Catalog-v[\d\.\_]+
 \.spec$
 ^META\.json$
 ^MYMETA\.json$

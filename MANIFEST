@@ -9,6 +9,7 @@ META.yml
 README
 t/001-load.t
 t/delegate.cat
+t/next.cat
 t/oasis.cat
 xt/author/perlcritic.t
 xt/author/pod-coverage.t

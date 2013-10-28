@@ -5,6 +5,7 @@ WriteMakefile
           'NAME' => 'XML::Catalog',
           'VERSION_FROM' => 'lib/XML/Catalog.pm',
           'PREREQ_PM' => {
+                           'Cwd' => 0,
                            'LWP::Simple' => 0,
                            'Test::More' => 0,
                            'Text::ParseWords' => 0,

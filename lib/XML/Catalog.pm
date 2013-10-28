@@ -9,7 +9,7 @@ use LWP::Simple;
 use URI::URL;
 use Text::ParseWords;
 
-$VERSION = '1.0.0';
+$VERSION = '1.0.1';
 
 #####################################################################
 # Class variables (private)
@@ -321,6 +321,12 @@ sub delegateSystem {
 }
 
 sub delegateURI {
+    my ( $p, $elem, %attrs ) = @_;
+    my $self = $p->{XMLCatalog};
+    $self->add_extend( $attrs{catalog} );
+}
+
+sub nextCatalog {
     my ( $p, $elem, %attrs ) = @_;
     my $self = $p->{XMLCatalog};
     $self->add_extend( $attrs{catalog} );
