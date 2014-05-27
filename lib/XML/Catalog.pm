@@ -8,7 +8,7 @@ use LWP::Simple;
 use URI::URL;
 use Text::ParseWords;
 
-use version; our $VERSION = version->declare("v1.0.2");
+use version; our $VERSION = version->declare("1.0.3");
 
 #####################################################################
 # Class variables (private)
