@@ -21,7 +21,7 @@ name: XML-Catalog
 provides:
   XML::Catalog:
     file: lib/XML/Catalog.pm
-    version: v1.0.3
+    version: 1.01
   XML::Catalog::XML:
     file: lib/XML/Catalog.pm
     version: 0
@@ -32,4 +32,4 @@ requires:
   XML::Parser: 0
 resources:
   license: http://dev.perl.org/licenses/
-version: v1.0.3
+version: 1.01
