@@ -1,5 +1,9 @@
 Revision history for Perl extension XML::Catalog.
 
+1.0.2 Tue May 27 2014
+- Fix missing DTDs causing build fail on Windows.
+- Fix non-portable version declaration.
+
 1.0.1 Mon Oct 28 2013
 - Fix test harness failing on some  machines. RT #89415
 - Add Oasis support for nextCatalog.

@@ -3,13 +3,12 @@ package XML::Catalog;
 use strict;
 use warnings;
 
-use vars qw($VERSION);
 use XML::Parser;
 use LWP::Simple;
 use URI::URL;
 use Text::ParseWords;
 
-$VERSION = '1.0.1';
+use version; our $VERSION = version->declare("v1.0.2");
 
 #####################################################################
 # Class variables (private)

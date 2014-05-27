@@ -43,7 +43,7 @@ my $builder = $class->new(
         'URI::URL'         => 0,
         'Text::ParseWords' => 0,
     },
-    add_to_cleanup => [ 'XML-Catalog-*', 'tmp', 'blib', '*.bak', 'META.yml' ],
+    add_to_cleanup => [ 'XML-Catalog-*', 'tmp', 'blib', '*.bak', 'META.yml', 'META.json' ],
     script_files   => [],
 );
 
