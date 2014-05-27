@@ -11,6 +11,8 @@ t/001-load.t
 t/delegate.cat
 t/next.cat
 t/oasis.cat
+t/test.dtd
+t/test2.dtd
 xt/author/perlcritic.t
 xt/author/pod-coverage.t
 xt/author/pod.t

@@ -9,7 +9,7 @@ use URI::URL;
 use Text::ParseWords;
 
 ## no critic
-our $VERSION = "1.02";
+our $VERSION = "1.03";
 $VERSION = eval $VERSION;
 ## use critic
 

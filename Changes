@@ -1,6 +1,9 @@
 Revision history for Perl extension XML::Catalog.
 
-1.0.2 Tue May 27 2014
+1.03 Wed May 28 2014
+- Add test DTDs to MANIFEST
+
+1.02 Tue May 27 2014
 - Fix missing DTDs causing build fail on Windows.
 - Fix non-portable version declaration.
 
