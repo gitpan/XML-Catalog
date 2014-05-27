@@ -9,7 +9,7 @@ use URI::URL;
 use Text::ParseWords;
 
 ## no critic
-our $VERSION = "1.01";
+our $VERSION = "1.02";
 $VERSION = eval $VERSION;
 ## use critic
 
@@ -257,6 +257,11 @@ sub parse_XML {
 }
 
 package XML::Catalog::XML;
+
+## no critic
+our $VERSION = "1.02";
+$VERSION = eval $VERSION;
+## use critic
 
 sub Map {
     my ( $p, $elem, %attrs ) = @_;
